@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitLab Todos Option</title>
+  <link rel="stylesheet" type="text/css" href="../normalize.css" />
+  <link rel="stylesheet" type="text/css" href="../pure-min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../Todo.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <form id="options" autocomplete="off" class="pure-form pure-form-stacked">
+      <fieldset>
+        <legend>Settings</legend>
+
+        <div class="control-group">
+          <label for="url">Gitlab URL</label>
+          <input id="url"  name="url"
+            type="text"
+            class="pure-input-1"
+            required pattern="https?://.+">
+        </div>
+        
+        <div class="control-group">
+          <label for="token">Access Token</label>
+          <input id="token" name="token"
+            type="text"
+            class="pure-input-1"
+            required>
+        </div>
+        
+        <div class="control-group">
+          <label for="rate">Polling Rate (sec)</label>
+          <input id="rate" name="rate" 
+            type="number"
+            class="pure-input-1"
+            placeholder="seconds" 
+            required min="5000" max="300000">
+        </div>
+
+        <button type="submit" class="pure-button pure-button-primary">Save</button>
+      </fieldset>
+    </form>
+  </div>
+  <div id="indicator"></div>
+  <script src="options.js"></script>
+</body>
+
+</html>

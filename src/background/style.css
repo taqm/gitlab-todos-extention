@@ -1,0 +1,23 @@
+#app {
+  width: 80%;
+  max-width: 780px;
+  margin: 30px auto;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+body {
+  font-size: 100%;
+}
+
+#indicator.is-active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  background: #333;
+}

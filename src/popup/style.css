@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+body {
+  width: 500px;
+}
+#app {
+  width: 80px;
+  margin: 30px auto;
+}
