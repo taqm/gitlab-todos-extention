@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "gitlab-todos",
   "description": "gitlab notifications",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "browser_action": {
     "default_popup": "src/popup/popup.html"
   },

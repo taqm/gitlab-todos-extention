@@ -3,7 +3,72 @@
 body {
   width: 500px;
 }
-#app {
-  width: 80px;
-  margin: 30px auto;
+
+#todo-list {
+  padding: 0;
+}
+
+.todo {
+  list-style: none;
+  border-radius: 5px;
+  border: #e5e5e5 1px solid;
+  transition: background 0.5s;
+  position: relative;
+}
+
+.todo + .todo {
+  margin-top: 10px;
+}
+
+.todo:hover {
+  background: rgba(255,0,0,0.1);
+}
+
+.todo .panel-heading {
+  padding: 5px 10px;
+  border-bottom: #e5e5e5 2px solid;
+  background: #fafafa;
+}
+
+.todo a,
+.todo a:hover,
+.todo a:visited {
+  font-size: 13px;
+  color: rgba(0,0,0,0.85);
+  text-decoration: none;
+}
+
+.surface:after {
+  clear: both;
+}
+
+.todo .panel-body {
+  padding: 10px;
+}
+
+.todo .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.todo .todo-box {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  width: calc(100% - 60px);
+}
+.todo-box .title {
+  margin-bottom: 5px;
+}
+.author-name {
+  font-weight: bold;
+}
+
+.surface {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
