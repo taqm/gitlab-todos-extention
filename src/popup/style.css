@@ -72,3 +72,10 @@ body {
   left: 0;
   right: 0;
 }
+
+
+.empty-message {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}

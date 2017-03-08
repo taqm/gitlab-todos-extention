@@ -1,4 +1,4 @@
-const todos = JSON.parse(localStorage.todos);
+const todos = JSON.parse(localStorage.todos || '[]');
 
 const list = document.getElementById('todo-list');
 todos.forEach((todo) => {
@@ -7,6 +7,14 @@ todos.forEach((todo) => {
   li.innerHTML = row(todo);
   list.appendChild(li);
 });
+
+if (!todos.length) {
+  document.body.innerHTML = `
+    <p class="empty-message">
+      you don't have any todo
+    </p>
+  `;
+}
 
 function row(todo) {
   const created = dateFormat(new Date(todo.created_at));
