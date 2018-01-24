@@ -25,12 +25,14 @@ options.addEventListener('submit', (ev) => {
   const url = ev.target.url.value;
   const token = ev.target.token.value;
   const rate = ev.target.rate.value;
+  const version = ev.target.version.value;
   indicator.start();
 
-  Todo.loadBy(url, token).done(() => {
+  Todo.loadBy(url, token, version).done(() => {
     localStorage.setItem('url', url);
     localStorage.setItem('token', token);
     localStorage.setItem('rate', rate);
+    localStorage.setItem('version', version);
     alert('save successed');
     chrome.runtime.sendMessage({ action: 'updated'});
 

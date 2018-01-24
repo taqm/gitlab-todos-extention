@@ -3,13 +3,13 @@
 
 Todo = {
   load() {
-    const { url, token } = localStorage;
-    return this.loadBy(url, token);
+    const { url, token, version } = localStorage;
+    return this.loadBy(url, token, version || 'v4');
   },
-  loadBy(url, token) {
+  loadBy(url, token, version = 'v4') {
     return $.ajax({
       type: 'get',
-      url: `${url}/api/v3/todos`,
+      url: `${url}/api/${version}/todos`,
       headers: {
         'PRIVATE-TOKEN': token
       }

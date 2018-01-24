@@ -25,7 +25,15 @@
             class="pure-input-1"
             required pattern="https?://.+">
         </div>
-        
+
+        <div class="control-group">
+          <label for="version">Api Version</label>
+          <select id="version" class="pure-input-1">
+            <option value="v4" selected>v4</option>
+            <option value="v3">v3</option>
+          </select>
+        </div>
+
         <div class="control-group">
           <label for="token">Access Token</label>
           <input id="token" name="token"
@@ -33,10 +41,10 @@
             class="pure-input-1"
             required>
         </div>
-        
+
         <div class="control-group">
           <label for="rate">Polling Rate (ms)</label>
-          <input id="rate" name="rate" 
+          <input id="rate" name="rate"
             type="number"
             class="pure-input-1"
             required min="5000" max="300000">
